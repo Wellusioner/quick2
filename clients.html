@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Profiles</title>
+</head>
+<body>
+  
+  <div id="home">
+    <div id="sidebar">
+      <div class="logo-wrapper">
+        <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
+      </div>
+      <div class="sidebar-menu">
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 " href="./index.html">
+          <img src="./images/side1.svg" alt="">
+          Главная
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./profiles.html">
+          <img src="./images/side2.svg" alt="">
+          Профили
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./clients.html">
+          <img src="./images/side3.svg" alt="">
+          Клиенты
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
+          <img src="./images/side4.svg" alt="">
+          UZB
+          <span class="menu-circle"></span>
+        </a>
+      </div>
+      <span class="d-lg-none close-button">&times;</span>
+    </div>
+    <div class="mask"></div>
+    <header>
+      <div class="py-3 px-4">
+        <div class="d-flex justify-content-lg-end justify-content-between align-items-center">
+          <img class="mobile-logo d-lg-none" width="150px" src="./images/logo.svg" alt="">
+          <div class="d-flex align-items-center">
+            <div class="text-secondary">Фарход Каримов</div>
+            <div class="position-relative ms-4 user-profile d-flex align-items-center">
+              <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
+            </div>
+            <img class="d-lg-none hamburger cursor-pointer ms-2" src="./images/hamburger.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-box pb-3">
+      <div class="ps-lg-0 pe-lg-4 px-2">
+        <h1 class="text-secondary fs-4 weight-300 mb-5">Список транзакций</h1>
+        <div class="">
+          <div class="pb-4">
+            <div class="d-flex justify-content-between">
+              <div class="form-group d-flex">
+                <div class="me-sm-3">
+                  <input id="datepicker" type="text" class="w-100 datepicker" placeholder="Дата" readonly>
+                </div>
+                <div>
+                  <select class="w-100 day-select day-location" name="weekdays">
+                    <option value="0" selected disabled>Локация</option>
+                    <option value="1">Ташкент</option>
+                    <option value="2">Термиз</option>
+                    <option value="3">Самарканл</option>
+                  </select>
+                </div>
+              </div>
+              <button class="d-inline-flex align-items-center eksport-button cursor-pointer px-3 py-2 rounded-1">
+                <img class="me-2" src="./images/excel.svg" alt="">
+                Экспортировать
+              </button>
+            </div>
+          </div>
+          <div class="table-wrapper overflowY-auto">
+            <table class="client-table w-100">
+              <thead align="left" class="table-head-light">
+                <tr>
+                  <th class="p-4">Клиент</th>
+                  <th class="p-4">Дилеры</th>
+                  <th class="p-4">Локация</th>
+                  <th class="p-4 text-center">Последняя покупка</th>
+                  <th class="p-4 text-center">Кол. покупок за год</th>
+                  <th class="p-4 text-center">Сумма за год</th>
+                  <th class="p-4">Контакты</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4">Екатерина Анашкина</td>
+                  <td class="p-4">Шавкат</td>
+                  <td class="p-4">Ташкент</td>
+                  <td class="p-4 text-center">17.04.2021</td>
+                  <td class="p-4"><div class="text-green text-center fs-20">12</div></td>
+                  <td class="p-4"><div class="text-green text-center fs-20">55 Млн</div></td>
+                  <td class="p-4">
+                    <div class="d-flex align-items-center">
+                      <a href="tel:+998901111111" class="me-3"><img src="./images/call.svg" alt=""></a>
+                      <a href="mailto:example@gmail.com" class="me-5"><img src="./images/mail.svg" alt=""></a>
+                      <span class="trash-icon cursor-pointer"><img src="./images/trash.svg" alt=""></span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="pagination-group d-flex align-items-center justify-content-end pt-4 pb-3">
+            <li class="pagination-item pagination-navigation disabled"><span><img src="./images/arrow-left.svg" alt=""></span></li>
+            <li class="pagination-item active"><a href="#!">1</a></li>
+            <li class="pagination-item"><a href="#!">2</a></li>
+            <li class="pagination-item"><a href="#!">3</a></li>
+            <li class="pagination-item"><a href="#!">4</a></li>
+            <li class="pagination-item"><a href="#!">5</a></li>
+            <li class="pagination-item"><a href="#!">...</a></li>
+            <li class="pagination-item"><a href="#!">10</a></li>
+            <li class="pagination-item pagination-navigation"><span><img src="./images/arrow-right.svg" alt=""></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/minibar.min.js"></script>
+  <script src="./js/nice-select2.js"></script>
+  <script src="./js/litepicker.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
