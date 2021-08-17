@@ -4,7 +4,7 @@
 
 :root{
   --secondary: #7B828A;
-  --green: #44D7B6;
+  --green: #63B176;
   --red: #F55945;
   --primaryBlue: #0091FF;
   --secondaryBlue: #3E8DB8;
@@ -19,11 +19,19 @@ body{
 }
 #home{
   padding-left: 330px;
-  transition: padding-left 0.2s linear;
+  /* transition: padding-left 0.1s linear; */
 }
 body.collapsed #home{
   padding-left: 130px;
 }
+header{
+  padding-left: 315px;
+  transition: padding-left 0.2s linear;
+}
+body.collapsed header{
+  padding-left: 115px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -54,8 +62,14 @@ img{
   background-repeat: no-repeat;
   background-position: center;
 }
+.text-start{
+  text-align: left;
+}
 .text-center{
   text-align: center;
+}
+.text-end{
+  text-align: right;
 }
 .default-title{
   line-height: 22px;
@@ -86,8 +100,15 @@ img{
 .position-relative{
   position: relative;
 }
+.position-absolute{
+  position: absolute;
+}
 .cursor-pointer{
   cursor: pointer;
+}
+
+.text-white{
+  color: #fff;
 }
 .text-blue{
   color: var(--primaryBlue);
@@ -102,7 +123,7 @@ img{
   color: var(--green);
 }
 .text-secondary{
-  color: var(--secondary);
+  color: var(--secondary) !important;
 }
 
 .weight-700{
@@ -115,23 +136,29 @@ img{
   font-weight: 300;
 }
 
+.fs-11{
+  font-size: 11px !important;
+}
+.fs-12{
+  font-size: 12px !important;
+}
 .fs-13{
-  font-size: 13px;
+  font-size: 13px !important;
 }
 .fs-15{
-  font-size: 15px;
+  font-size: 15px !important;
 }
 .fs-18{
-  font-size: 18px;
+  font-size: 18px !important;
 }
 .fs-20{
-  font-size: 20px;
+  font-size: 20px !important;
 }
 .fs-24{
-  font-size: 24px;
+  font-size: 24px !important;
 }
 .fs-30{
-  font-size: 30px;
+  font-size: 30px !important;
   line-height: 34px;
 }
 
@@ -148,6 +175,10 @@ img{
 .w-100{
   width: 100%;
 }
+
+.h-100{
+  height: 100%;
+}
 .text-uppercase{
   text-transform: uppercase;
 }
@@ -163,11 +194,32 @@ img{
 .overflowX-auto{
   overflow-x: auto;
 }
+.overflow-hidden{
+  overflow: hidden;
+}
 
 .rounded-1{
   border-radius: 4px;
 }
+.rounded-2{
+  border-radius: 8px;
+}
+.rounded-3{
+  border-radius: 12px;
+}
+.rounded-4{
+  border-radius: 16px;
+}
 
+.z-m1{
+  z-index: -1;
+}
+.z-0{
+  z-index: 0;
+}
+.z-1{
+  z-index: 1;
+}
 /*general style ends*/
 
 
@@ -423,7 +475,7 @@ header.active{
   border: none;
   padding-left: 30px;
   padding-right: 25px;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 12px;
   height: auto;
   min-width: 130px;
@@ -431,6 +483,10 @@ header.active{
 }
 .day-location{
   background-image: url(../images/location.svg);
+}
+.day-select.no-bg{
+  background-image: none;
+  padding-left: 15px;
 }
 .datepicker{
   padding: 11px 20px;
@@ -499,11 +555,21 @@ header.active{
   background: #eee;
   border-radius: 11px;
 }
+.sum-badge.sum-badge-big{
+  padding-left: 20px;
+}
+.sum-badge.sum-badge-big::before{
+  width: 10px;
+  height: 10px;
+}
 .sum-badge.sum-badge-red::before{
   background: var(--red);
 }
 .sum-badge.sum-badge-green::before{
   background: var(--green);
+}
+.sum-badge.sum-badge-info::before{
+  background: var(--secondaryBlue);
 }
 .sum-badge.sum-badge-blue::before{
   background: var(--primaryBlue);
@@ -549,18 +615,18 @@ header.active{
 .table-wrapper {
   max-height: 610px;
 }
-.client-table{
+table{
   border-collapse: collapse;
   min-width: 500px;
 }
-.client-table .table-head-light{
+.table-head-light{
   background-color: #eee;
 }
-.client-table th{
+table th{
   vertical-align: top;
 }
-.client-table th,
-.client-table td{
+table th,
+table td{
   padding: 8px;
   font-weight: 400;
   color: var(--secondary);
@@ -742,10 +808,48 @@ header.active{
   background: rgba(47, 73, 209, 0.1);
   cursor: not-allowed;
 }
+.custom-select{
+  background-color: #F1F1F1;
+  padding: 5px;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+}
+.user-location{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.extra-box{
+  background: linear-gradient(214.79deg, #3D4C5D , #3FBFFF);
+  padding: 10px;
+  height: 52px;
+  opacity: 0;
+}
+.extra-box::before {
+  position: absolute;
+  content: '';
+  top: 7px;
+  left: -12px;
+  background: linear-gradient(280deg, #3FBFFF, #3FAAE2);
+  height: 37px;
+  width: 37px;
+  transform: rotate(45deg);
+  border-radius: 8px;
+  z-index: -1;
+}
+table tr:hover .extra-box{
+  opacity: 1;
+}
 
 
-
-
+.overall-button{
+  padding: 8px;
+  background: rgba(50, 119, 224, 0.08);
+  border-radius: 4px;
+  color: #3277E0;
+}
 
 @media (min-width: 768px){
   .user-dropdown a:hover{

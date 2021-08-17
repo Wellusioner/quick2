@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Clients</title>
+</head>
+<body>
+  
+  <div id="home">
+    <div id="sidebar">
+      <div class="logo-wrapper">
+        <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
+      </div>
+      <div class="sidebar-menu">
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 " href="./index.html">
+          <img src="./images/side1.svg" alt="">
+          Главная
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./profiles.html">
+          <img src="./images/side2.svg" alt="">
+          Профили
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./clients.html">
+          <img src="./images/side3.svg" alt="">
+          Клиенты
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
+          <img src="./images/side4.svg" alt="">
+          UZB
+          <span class="menu-circle"></span>
+        </a>
+      </div>
+      <span class="d-lg-none close-button">&times;</span>
+    </div>
+    <div class="mask"></div>
+    <header>
+      <div class="p-3">
+        <div class="d-flex justify-content-lg-end justify-content-between align-items-center">
+          <img class="mobile-logo d-lg-none" width="150px" src="./images/logo.svg" alt="">
+          <div class="d-flex align-items-center">
+            
+            <a class="ms-4" href="#!"><img src="./images/user.svg" alt=""></a>
+            <div class="position-relative ms-4 user-profile d-flex align-items-center">
+              <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
+              <span class="cursor-pointer d-inline-block p-2 user-arrow"><img src="./images/down-arrow.svg" alt=""></span>
+              
+              <div class="user-dropdown">
+                <a class="d-block" href="#!">Dashboard</a>
+                <a class="d-block" href="#!">Profile</a>
+                <a class="d-block" href="#!">Settings</a>
+                <a class="d-block" href="#!">Log out</a>
+              </div>
+            </div>
+            <img class="d-lg-none hamburger cursor-pointer ms-2" src="./images/hamburger.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-box pb-3">
+      <div class="ps-lg-0 pe-lg-2 px-2">
+        <div class="d-flex align-items-center g-3">
+          <div class="pe-2">
+            <select class="w-100 day-select no-bg" name="overall">
+              <option value="" selected disabled>Общее</option>
+              <option value="1">Общее 1</option>
+              <option value="2">Общее 2</option>
+              <option value="3">Общее 3</option>
+            </select>
+          </div>
+          <div>
+            <select class="w-100 day-select day-location" name="location">
+              <option value="0" selected disabled>Локация</option>
+              <option value="1">Ташкент</option>
+              <option value="2">Термиз</option>
+              <option value="3">Самарканл</option>
+            </select>
+          </div>
+          <div class="pe-2">
+            <select class="w-100 day-select no-bg" name="product">
+              <option value="" selected disabled>Продукт</option>
+              <option value="product1">Product 1</option>
+              <option value="product2">Poduct 2</option>
+              <option value="product3">Product 3</option>
+            </select>
+          </div>
+          <div class="p-3">
+            <input id="datepicker" type="text" class="w-100 datepicker" placeholder="Дата" data-mode="true" readonly>
+          </div>
+        </div>
+        <div class="row g-4 me-0">
+          <div class="col-md-6">
+            <div class="bordered rounded-1 p-4 h-100">
+              <div class="default-title fs-14 mb-4">Общая статистика</div>
+              <div class="row g-3 statistic-group">
+                <div class="col-md-4 statistic-item">
+                  <span class="statistic-number">1 315</span>
+                  <p class="statistic-text fs-14">Общее <br> количество <br> клиентов</p>
+                </div>
+                <div class="col-md-4 statistic-item">
+                  <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-green">Exclusive <span class="text-green weight-700">15,000</span></div>
+                  <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-red">Standart <span class="text-blue2 weight-700">7,000</span></div>
+                  <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-info">Economy <span class="text-blue weight-700">3,000</span></div>
+                  <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-blue">Accessories <span class="text-red weight-700">3,000</span></div>
+                </div>
+                <div class="col-md-4 statistic-sum">
+                  <div class="sum-title">
+                    Сумма (в сум)
+                    <select class="custom-select" name="avg">
+                      <option value="avg">AVG</option>
+                      <option value="avg1">AVG 1</option>
+                    </select>
+                  </div>
+                  <span class="d-block sum-amount mb-2 mt-3">321млн</span>
+                  <div class="sum-bar sum-bar-green" style="width: 100%;">
+                    <div style="width: 75%;"></div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-4 bordered rounded-1">
+              <div class="default-title">Лучшие регионы по продажам</div>
+              <div id="chart2"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="table-wrapper">
+              <table class="client-table w-100">
+                <thead align="left" class="table-head-light">
+                  <tr class="rounded-1 overflow-hidden">
+                    <th class="p-3">Имя</th>
+                    <th class="p-3 text-center">Локация</th>
+                    <th class="p-3">Сумма</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td class="p-3 position-relative text-center">
+                      <div class="position-absolute text-secondary user-location">Ташкент</div>
+                      <div class="extra-box rounded-3 d-inline-flex align-items-center position-relative">
+                        <div class="fs-12 me-3 text-white"><span class="weight-700 text-white">Телефон:</span> 90 925 15 14</div>
+                        <div>
+                          <div class="fs-12 mb-1 text-white"><span class="weight-700 text-white">Дилер:</span> Наманган 1</div>
+                          <div class="fs-12 text-white"><span class="weight-700 text-white">Район:</span> Учтепинский </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="text-end">
+              <button class="d-inline-flex align-items-center eksport-button cursor-pointer px-3 py-2 rounded-1">
+                <img class="me-2" src="./images/excel.svg" alt="">
+                Экспортировать
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="bordered rounded-1 p-3">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="default-title mb-0 fs-14">Средний чек по регионам</div>
+                <div>
+                  <span class="default-title">Общее количество клиентов</span>
+                  <button class="overall-button ">20 тыс.</button>
+                </div>
+              </div>
+
+              <div class="table-wrapper">
+                <table class="region-table w-100">
+                  <thead>
+                    <th><div class="weight-700 text-start">Регион</div></th>
+                    <th><div class="weight-700">0–5 млн.</div></th>
+                    <th><div class="weight-700">5–10 млн.</div></th>
+                    <th><div class="weight-700">15–20 млн.</div></th>
+                    <th><div class="weight-700 text-end">20+ млн.</div></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div>Tashkent</div></td>
+                      <td class="text-center"><span>140 - 15%</span></td>
+                      <td class="text-center"><span>140 - 15%</span></td>
+                      <td class="text-center"><span>140 - 15%</span></td>
+                      <td class="text-end"><span>140 - 15%</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/litepicker.js"></script>
+  <script src="./js/minibar.min.js"></script>
+  <script src="./js/apexcharts.min.js"></script>
+  <script src="./js/nice-select2.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -42,12 +42,12 @@ window.addEventListener('scroll', function(){
   }
 });
 
-// if(document.querySelector('.table-wrapper')){
+if(document.querySelector('.table-wrapper')){
   new MiniBar('.table-wrapper', {
     hideBars: false,
     alwaysShowBars: true,
   });
-// }
+}
 
 
 const selects = document.querySelectorAll('.day-select');
@@ -55,18 +55,23 @@ const selects = document.querySelectorAll('.day-select');
 selects.forEach(function(item){
   NiceSelect.bind(item);
 });
-if(document.getElementById('datepicker')){
-  const picker = new Litepicker({ 
-    element: document.getElementById('datepicker'),
-    singleMode: false,
-    tooltipText: {
-      one: 'day',
-      other: 'days'
-    },
-    tooltipNumber: (totalDays) => {
-      return totalDays - 1;
-    } 
+if(document.querySelectorAll('.datepicker')){
+  const pickerList = document.querySelectorAll('.datepicker');
+
+  pickerList.forEach(function(picker){
+    new Litepicker({ 
+      element: picker,
+      singleMode: !!picker.getAttribute('data-mode'),
+      tooltipText: {
+        one: 'day',
+        other: 'days'
+      },
+      tooltipNumber: (totalDays) => {
+        return totalDays - 1;
+      } 
+    });
   });
+  
 }
 
 //Setting default values to CHART
