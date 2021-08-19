@@ -1415,6 +1415,154 @@ if(document.querySelector("#withdraw_chart")){
 
 
 
+//Chart14
+var options14 = {
+  chart: {
+    type: "bar",
+    height: 200,
+  },
+  colors: ['#2D8A3B'],
+  stroke: {
+    enabled: false
+  },
+	grid: {
+    show: true,
+    borderColor: '#E6E6E6',
+    strokeDashArray: 3,
+    position: 'back',
+    xaxis: {
+			lines: {
+				show: true
+			}
+    },   
+    yaxis: {
+			lines: {
+				show: true
+			}
+    },  
+    row: {
+			colors: undefined,
+			opacity: 0.5
+    },  
+    column: {
+			colors: undefined,
+			opacity: 0.5
+    },  
+    padding: {
+			top: 0,
+			right: 0,
+			bottom: 0,
+			left: 0
+    },  
+	},
+  fill: {
+    type: "gradient",
+    gradient: {
+      type: 'vertical',
+      shadeIntensity: 0,
+      opacityFrom: 0.7,
+      opacityTo: 1,
+//      colorsStops: [0,90,100]
+    },
+		gradient: {
+			shade: 'light',
+			type: "vertical",
+			shadeIntensity: 0,
+			gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+			inverseColors: false,
+			opacityFrom: 0.9,
+			opacityTo: 1,
+			stops: [0, 60, 100],
+			colorStops: []
+		}
+  },
+	dataLabels: {
+    offsetY: 5,
+		formatter: function (val, opts) {
+      return val + "%"
+  	},
+    style: {
+      colors: ["#fff"]
+    }
+  },
+  series: [
+    {
+      data: [10,20,50,30,21,23,45,32,33,12,25,35]
+    }
+  ],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+		custom: function({ series, dataPointIndex}) {
+      return (
+        '<div class="dark-tooltip py-2 px-3">' +
+					"<span class='weight-700 text-white'>" +
+						455 + " млн." + 
+					"</span>" +
+        "</div>"
+      );
+    },
+  },
+  labels: [],
+  xaxis: {
+		categories: [
+			"Таш",
+			"Анд",
+			"Бух",
+			"Джи",
+			"Каш",
+			"Нав",
+			"Сам",
+			"Сур",
+			"Сыр",
+			"Фер",
+			"Хор",
+			"Нук"
+		],
+    labels: {
+      show: true,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false
+    },
+    type: "category",
+  },
+  yaxis: {
+		show: false
+  },
+  plotOptions: {
+      bar: {
+				startingShape: "rounded",
+				endingShape: "rounded",
+				borderRadius: 6,
+				columnWidth: '60%',
+			 	dataLabels: {
+					position: 'top'
+				}
+      }
+  },
+  legend: {
+      fontFamily: 'Helvetica, sans-serif',
+      fontSize: '11px',
+      markers: {
+          radius: 12,
+      }
+  }
+};
+if(document.querySelector("#region_chart")){
+  var chart14 = new ApexCharts(document.querySelector("#region_chart"), options14);
+  chart14.render();
+}
+
+
+
 
 
 

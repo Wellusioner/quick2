@@ -7,7 +7,7 @@
   <title>Clients</title>
 </head>
 <body>
-  
+
   <div id="home">
     <div id="sidebar">
       <div class="logo-wrapper">
@@ -44,7 +44,7 @@
           <img class="mobile-logo d-lg-none" width="150px" src="./images/logo.svg" alt="">
           <div class="d-flex align-items-center">
             
-            <a class="ms-4" href="#!"><img src="./images/user.svg" alt=""></a>
+            <a class="ms-4" href="#!"><img src="./images/user-time.svg" alt=""></a>
             <div class="position-relative ms-4 user-profile d-flex align-items-center">
               <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
               <span class="cursor-pointer d-inline-block p-2 user-arrow"><img src="./images/down-arrow.svg" alt=""></span>
@@ -104,9 +104,9 @@
                 </div>
                 <div class="col-md-4 statistic-item">
                   <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-green">Exclusive <span class="text-green weight-700">15,000</span></div>
-                  <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-red">Standart <span class="text-blue2 weight-700">7,000</span></div>
+                  <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-blue">Standart <span class="text-blue2 weight-700">7,000</span></div>
                   <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-info">Economy <span class="text-blue weight-700">3,000</span></div>
-                  <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-blue">Accessories <span class="text-red weight-700">3,000</span></div>
+                  <div class="sum-title mb-3 text-secondary sum-badge sum-badge-big sum-badge-red">Accessories <span class="text-red weight-700">3,000</span></div>
                 </div>
                 <div class="col-md-4 statistic-sum">
                   <div class="sum-title">
@@ -127,7 +127,7 @@
           <div class="col-md-6">
             <div class="p-4 bordered rounded-1">
               <div class="default-title">Лучшие регионы по продажам</div>
-              <div id="chart2"></div>
+              <div id="region_chart"></div>
             </div>
           </div>
           <div class="col-md-6">
@@ -410,7 +410,7 @@
                 </tbody>
               </table>
             </div>
-            <div class="text-end">
+            <div class="pt-2 text-end">
               <button class="d-inline-flex align-items-center eksport-button cursor-pointer px-3 py-2 rounded-1">
                 <img class="me-2" src="./images/excel.svg" alt="">
                 Экспортировать
@@ -418,16 +418,16 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="bordered rounded-1 p-3">
+            <div class="bordered h-100 rounded-1 p-3">
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <div class="default-title mb-0 fs-14">Средний чек по регионам</div>
                 <div>
-                  <span class="default-title">Общее количество клиентов</span>
+                  <span class="d-inline-block me-2 default-title">Общее количество клиентов</span>
                   <button class="overall-button ">20 тыс.</button>
                 </div>
               </div>
 
-              <div class="table-wrapper">
+              <div class="table-wrapper region-table-wrapper">
                 <table class="region-table w-100">
                   <thead>
                     <th><div class="weight-700 text-start">Регион</div></th>
@@ -439,14 +439,529 @@
                   <tbody>
                     <tr>
                       <td><div>Tashkent</div></td>
-                      <td class="text-center"><span>140 - 15%</span></td>
-                      <td class="text-center"><span>140 - 15%</span></td>
-                      <td class="text-center"><span>140 - 15%</span></td>
-                      <td class="text-end"><span>140 - 15%</span></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Андижан</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Бухара</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Джизак</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Кашкадарья</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Наваи</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Самарканд</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Сурхандарья</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Сырдарья</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Фергана</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                      <td><div>Хоразм</div></td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-center">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                      <td class="text-end">
+												<span class="region-hover d-inline-block rounded-1 p-3">
+													140 - 15%
+													<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+												</span>
+											</td>
+                    </tr>
+                    <tr>
+                    	<td><span class="weight-600">Общее</span></td>
+                    	<td class="text-center"><span class="region-hover d-inline-block rounded-1 p-3">
+                    		<small class="d-inline-block mb-1 weight-700 fs-20 text-green">25%</small>
+                    		<br>
+                    		140
+                    		<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+                    	</span></td>
+                    	<td class="text-center"><span class="region-hover d-inline-block rounded-1 p-3">
+                    		<small class="d-inline-block mb-1 weight-700 fs-20 text-green">25%</small>
+                    		<br>
+                    		140
+                    		<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+                    	</span></td>
+                    	<td class="text-center"><span class="region-hover d-inline-block rounded-1 p-3">
+                    		<small class="d-inline-block mb-1 weight-700 fs-20 text-green">25%</small>
+                    		<br>
+                    		140
+                    		<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+                    	</span></td>
+                    	<td class="text-center"><span class="region-hover d-inline-block rounded-1 p-3">
+                    		<small class="d-inline-block mb-1 weight-700 fs-20 text-green">25%</small>
+                    		<br>
+                    		140
+                    		<span class="region-popper">
+														От общих продаж
+														<br>
+														<small>2% - 168 млн.</small>
+													</span>
+                    	</span></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <div class="pt-2 text-end">
+								<button class="d-inline-flex align-items-center eksport-button cursor-pointer px-3 py-2 rounded-1">
+									<img class="me-2" src="./images/excel.svg" alt="">
+									Экспортировать
+								</button>
+							</div>
             </div>
           </div>
         </div>
