@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Uzb</title>
+</head>
+<body>
+  
+  <div id="home" class="has-top">
+    <div id="sidebar">
+      <div class="logo-wrapper">
+        <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
+      </div>
+      <div class="sidebar-menu">
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./index.html">
+          <img src="./images/side1.svg" alt="">
+          Главная
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 " href="./profiles.html">
+          <img src="./images/side2.svg" alt="">
+          Профили
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./clients.html">
+          <img src="./images/side3.svg" alt="">
+          Клиенты
+          <span class="menu-circle"></span>
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
+          <img src="./images/side4.svg" alt="">
+          UZB
+          <span class="menu-circle"></span>
+        </a>
+      </div>
+      <span class="d-lg-none close-button">&times;</span>
+    </div>
+    <div class="mask"></div>
+    <header>
+      <div class="p-3">
+        <div class="d-flex justify-content-lg-end justify-content-between align-items-center">
+          <img class="mobile-logo d-lg-none" width="150px" src="./images/logo.svg" alt="">
+          <div class="d-flex align-items-center">
+            <div class="position-relative ms-4 user-profile d-flex align-items-center">
+              <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
+              <span class="cursor-pointer d-inline-block p-2 user-arrow"><img src="./images/down-arrow.svg" alt=""></span>
+              
+              <div class="user-dropdown">
+                <a class="d-block" href="#!">Dashboard</a>
+                <a class="d-block" href="#!">Profile</a>
+                <a class="d-block" href="#!">Settings</a>
+                <a class="d-block" href="#!">Log out</a>
+              </div>
+            </div>
+            <img class="d-lg-none hamburger cursor-pointer ms-2" src="./images/hamburger.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-box pb-3">
+      <div class="ps-lg-0 pe-lg-2 px-2">
+      	<div class="d-flex align-items-center g-3 mb-3 z-11 position-relative">
+          <div class="pe-2">
+            <select class="w-100 day-select no-bg" name="overall">
+              <option value="" selected>Период - За 3 месяца</option>
+              <option value="1">Период - За 4 месяца</option>
+              <option value="2">Период - За 5 месяца</option>
+              <option value="3">Период - За 6 месяца</option>
+            </select>
+          </div>
+          <div class="pe-2">
+            <select class="w-100 day-select no-bg" name="product">
+              <option value="" selected>Сум</option>
+              <option value="product1">Рубл</option>
+              <option value="product2">Доллар</option>
+            </select>
+          </div>
+        </div>
+			  <div class="bordered rounded-1 p-4 h-100 mb-3">
+			  	<div class="default-title mb-2">Количество клиентов</div>
+					 <div class="row align-items-center gx-5">
+						<div class="col-xl-7 border-right">
+							<div class="row g-4 statistic-group">
+								<div class="col-md-4 statistic-item">
+									<span class="statistic-number mb-3">45,500</span>
+									<p class="statistic-text lh-20">Общее количество <br>клиентов</p>
+								</div>
+								<div class="col-md-4 statistic-item">
+									<span class="statistic-number mb-3">40,000</span>
+									<p class="statistic-text lh-20">Общее количество <br> активных клиентов</p>
+								</div>
+								<div class="col-md-4 statistic-sum">
+									<span class="statistic-number mb-3 text-green">500</span>
+									<p class="statistic-text lh-20">Общее количество <br> обновленных <br>клиентов</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-5 col-lg-8  col-md-7">
+							<div id="chart15"></div>
+						</div>
+						<div class="col-xl-7 pt-2 text-center">
+								<button class="d-inline-flex align-items-center eksport-button cursor-pointer px-3 py-2 rounded-1">
+									<img class="me-2" src="./images/excel.svg" alt="">
+									Экспортировать
+								</button>
+							</div>
+					 </div>
+					</div>
+        <div class="row">
+        	<div class="col-xl-6">
+        	<div class="bordered rounded-1 p-4">
+        		<div class="row">
+        			<div class="col-lg-12 col-md-7">
+        				<div class="pb-5 mb-5">
+									<div class="default-title">Статистика продаж</div>
+									<div id="chart16"></div>
+								</div>
+        			</div>
+        		</div>
+        		<div class="default-title">Топ 6 продаваемых серия профилей</div>
+						<div id="chart18"></div>
+        	</div>
+        	</div>
+        	<div class="col-xl-6">
+        		<div class="bordered rounded-1 p-4 mb-4">
+        			<div class="default-title">Общая статистика по продажам</div>
+        			<div id="chart19"></div>
+        		</div>
+        		<div class="">
+        			<div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+								<div class="default-title">Список покупателей премиум продукции</div>
+								<button class="d-inline-flex align-items-center eksport-button cursor-pointer px-3 py-2 rounded-1">
+									<img class="me-2" src="./images/excel.svg" alt="">
+									Экспортировать
+								</button>
+        			</div>
+        			<div class="table-wrapper eksport-table">
+								<table class="client-table w-100">
+									<thead align="left" class="table-head-light">
+										<tr class="rounded-2 overflow-hidden">
+											<th class="p-3">Имя</th>
+											<th class="p-3 text-center">Локация</th>
+											<th class="p-3">Сумма</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+										<tr>
+											<td class="p-3">Babila Ebwélé</td>
+											<td class="p-3 position-relative text-center">
+												<div class="text-secondary">Ташкент</div>
+											</td>
+											<td class="p-3"> <span class="table-money text-green">55млн</span> </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const svgPath = document.querySelectorAll('.region');
+    const tooltip = document.querySelector('.map-tooltip');
+
+    svgPath.forEach(function(item){
+      item.addEventListener('mouseenter', function(){
+        var t = item.getBoundingClientRect().top,
+            l = item.getBoundingClientRect().left,
+            height = item.getBoundingClientRect().height;
+        tooltip.style.top = (t + (height > 100 ? height : height * 2)) + "px";
+        tooltip.style.left = (l) + "px";
+
+        const html = '<span>Наманган</span> Продано: 14051 <br> Возврат: 205';
+        tooltip.innerHTML = html;
+        tooltip.classList.add('active');
+      });
+      item.addEventListener('mouseleave', function(){
+        tooltip.classList.remove('active');
+      });
+    });
+  </script>
+  
+  <script src="./js/nice-select2.js"></script>
+  <script src="./js/minibar.min.js"></script>
+  <script src="./js/apexcharts.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

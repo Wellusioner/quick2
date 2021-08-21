@@ -7,8 +7,7 @@
   <title>Clients</title>
 </head>
 <body>
-
-  <div id="home">
+  <div id="home" class="has-top">
     <div id="sidebar">
       <div class="logo-wrapper">
         <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
@@ -64,8 +63,8 @@
 
     <div class="main-box pb-3">
       <div class="ps-lg-0 pe-lg-2 px-2">
-        <div class="d-flex align-items-center g-3">
-          <div class="pe-2">
+        <div class="d-flex align-items-center flex-wrap g-3 mb-3 z-11 position-lg-relative">
+          <div class="pe-2 mb-1">
             <select class="w-100 day-select no-bg" name="overall">
               <option value="" selected disabled>Общее</option>
               <option value="1">Общее 1</option>
@@ -73,7 +72,7 @@
               <option value="3">Общее 3</option>
             </select>
           </div>
-          <div>
+          <div class="pe-2 mb-1">
             <select class="w-100 day-select day-location" name="location">
               <option value="0" selected disabled>Локация</option>
               <option value="1">Ташкент</option>
@@ -81,7 +80,7 @@
               <option value="3">Самарканл</option>
             </select>
           </div>
-          <div class="pe-2">
+          <div class="pe-2 mb-1">
             <select class="w-100 day-select no-bg" name="product">
               <option value="" selected disabled>Продукт</option>
               <option value="product1">Product 1</option>
@@ -89,12 +88,12 @@
               <option value="product3">Product 3</option>
             </select>
           </div>
-          <div class="p-3">
+          <div>
             <input id="datepicker" type="text" class="w-100 datepicker" placeholder="Дата" data-mode="true" readonly>
           </div>
         </div>
         <div class="row g-4 me-0">
-          <div class="col-md-6">
+          <div class="col-xl-6">
             <div class="bordered rounded-1 p-4 h-100">
               <div class="default-title fs-14 mb-4">Общая статистика</div>
               <div class="row g-3 statistic-group">
@@ -124,14 +123,14 @@
               </div> 
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-xl-6">
             <div class="p-4 bordered rounded-1">
               <div class="default-title">Лучшие регионы по продажам</div>
               <div id="region_chart"></div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="table-wrapper">
+          <div class="col-xl-6">
+            <div class="table-wrapper position-relative has-bottom-shadow" style="min-height: 920px;">
               <table class="client-table w-100">
                 <thead align="left" class="table-head-light">
                   <tr class="rounded-1 overflow-hidden">
@@ -417,7 +416,7 @@
               </button>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-xl-6">
             <div class="bordered h-100 rounded-1 p-3">
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <div class="default-title mb-0 fs-14">Средний чек по регионам</div>
@@ -427,7 +426,7 @@
                 </div>
               </div>
 
-              <div class="table-wrapper region-table-wrapper">
+              <div class="region-table-wrapper">
                 <table class="region-table w-100">
                   <thead>
                     <th><div class="weight-700 text-start">Регион</div></th>
